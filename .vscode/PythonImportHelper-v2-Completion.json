@@ -1,0 +1,60 @@
+[
+    {
+        "label": "Update",
+        "importPath": "telegram",
+        "description": "telegram",
+        "isExtraImport": true,
+        "detail": "telegram",
+        "documentation": {}
+    },
+    {
+        "label": "ApplicationBuilder",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "CommandHandler",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "MessageHandler",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "def main():\n    app = ApplicationBuilder().token(BOT_TOKEN).build()\n    app.add_handler(CommandHandler(\"start\", start))\n    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))\n    app.run_polling()\nif __name__ == '__main__':\n    main()",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "BOT_TOKEN",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "BOT_TOKEN = \"7724793156:AAHXBbg5VYnCht7dY4g6XYPczXR5xeGKj3U\" \nasync def start(update: Update, context):\n    await update.message.reply_text('Привет! Ща буду чудить. ваш бебра ботт.')\nasync def echo(update: Update, context):\n    await update.message.reply_text(update.message.text)\ndef main():\n    app = ApplicationBuilder().token(BOT_TOKEN).build()\n    app.add_handler(CommandHandler(\"start\", start))\n    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))\n    app.run_polling()",
+        "detail": "bot",
+        "documentation": {}
+    }
+]
